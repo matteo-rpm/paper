@@ -1,4 +1,4 @@
-# paper
+# papers
 
 Repository containing codes related to published articles
 
