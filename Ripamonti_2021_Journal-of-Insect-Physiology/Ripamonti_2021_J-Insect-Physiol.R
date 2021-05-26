@@ -1,4 +1,4 @@
-Citation:
+#Citation:
 @article{,
   author =       "Matteo Ripamonti and Federico Maron and Daniele Cornara and Cristina Marzachì and Alberto Fereres and Domenico Bosco",
   title =        "{<i> Scaphoideus titanus </i> Ball feeding behaviour on three grapevine cultivars with different susceptibilities to Flavescence dorée}",
