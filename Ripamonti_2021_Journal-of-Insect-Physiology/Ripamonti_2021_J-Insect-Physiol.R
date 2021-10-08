@@ -295,8 +295,8 @@ library(tibble)
 
 #fake dbB_0 for phloem recordings only
 dbB_0B <- matrix(c("Barbera", 0, 2, 0, 31, 0, "Barbera", 0, 7, 0, 31, 0, "Barbera", 0, 5, 0, 31, 0, "Barbera", 2, 7, 0, 31, 0,
-                 "Brachetto", 0, 2, 0, 31, 0, "Brachetto", 0, 7, 0, 31, 0, "Brachetto", 0, 5, 0, 31, 0, "Brachetto", 1, 5, 0, 32, 0, "Brachetto", 8, 7, 0, 32, 0,
-                 "Moscato", 0, 2, 0, 31, 0, "Moscato", 0, 7, 0, 31, 0, "Moscato", 0, 5, 0, 31, 0, "Moscato", 0, 2, 0, 37, 0, "Moscato", 4, 7, 0, 37, 0, "Moscato", 7, 7, 0, 37, 0), nrow = 15, byrow = T)
+                 "Brachetto", 0, 2, 0, 32, 0, "Brachetto", 0, 7, 0, 32, 0, "Brachetto", 0, 5, 0, 32, 0, "Brachetto", 1, 5, 0, 32, 0, "Brachetto", 8, 7, 0, 32, 0,
+                 "Moscato", 0, 2, 0, 37, 0, "Moscato", 0, 7, 0, 37, 0, "Moscato", 0, 5, 0, 37, 0, "Moscato", 0, 2, 0, 37, 0, "Moscato", 4, 7, 0, 37, 0, "Moscato", 7, 7, 0, 37, 0), nrow = 15, byrow = T)
 
 #operations on fake dataset
 colnames(dbB_0B) <- c("Cultivar", "hour", "waveform", "n", "tot", "perchour")
