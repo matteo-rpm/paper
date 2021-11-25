@@ -1017,35 +1017,35 @@ median_gentab <- median_gentab %>%
   unite(medianse.n_np, median.n_np|se.n_np, sep = " ± ", remove = T) %>%
   unite("Number of non-probing periods *", medianse.n_np|group.n_np, sep = " ", remove = T) %>% 
   unite(medianse.s_np, median.s_np|se.s_np, sep = " ± ", remove = T) %>%
-  unite("Total duration of non-probing periods [s] *", medianse.s_np|group.s_np, sep = " ", remove = T) %>%
+  unite("Total duration of non-probing periods [min] *", medianse.s_np|group.s_np, sep = " ", remove = T) %>%
   unite(medianse.s_2np, median.s_2np|se.s_2np, sep = " ± ", remove = T) %>%
   unite("Duration of the 2nd non-probing period [s] *", medianse.s_2np|group.s_2np, sep = " ", remove = T) %>%
   unite(medianse.n_Pr, median.n_Pr|se.n_Pr, sep = " ± ", remove = T) %>% 
   unite("Number of probes *", medianse.n_Pr|group.n_Pr, sep = " ", remove = T) %>% 
   unite(medianse.s_Pr, median.s_Pr|se.s_Pr, sep = " ± ", remove = T) %>% 
-  unite("Total probing time [s] *", medianse.s_Pr|group.s_Pr, sep = " ", remove = T) %>% 
+  unite("Total probing time [min] *", medianse.s_Pr|group.s_Pr, sep = " ", remove = T) %>% 
   unite(medianse.s_C, median.s_C|se.s_C, sep = " ± ", remove = T) %>% 
-  unite("Total duration of pathway phase [s] **", medianse.s_C|group.s_C, sep = " ", remove = T) %>% 
+  unite("Total duration of pathway phase [min] **", medianse.s_C|group.s_C, sep = " ", remove = T) %>% 
   unite(medianse.n_G, median.n_G|se.n_G, sep = " ± ", remove = T) %>% 
   unite("Number of active ingestion phases **", medianse.n_G|group.n_G, sep = " ", remove = T) %>% 
   unite(medianse.s_G, median.s_G|se.s_G, sep = " ± ", remove = T) %>% 
-  unite("Total duration of active ingestion [s] *", medianse.s_G|group.s_G, sep = " ", remove = T) %>% 
+  unite("Total duration of active ingestion [min] *", medianse.s_G|group.s_G, sep = " ", remove = T) %>% 
   unite(medianse.n_E2, median.n_E2|se.n_E2, sep = " ± ", remove = T) %>% 
   unite("Number of phloem ingestions *", medianse.n_E2|group.n_E2, sep = " ", remove = T) %>% 
   unite(medianse.n_sE2, median.n_sE2|se.n_sE2, sep = " ± ", remove = T) %>% 
-  unite("Number of sustained (> 600 s) phloem ingestion *", medianse.n_sE2|group.n_sE2, sep = " ", remove = T) %>% 
+  unite("Number of sustained (> 10 min) phloem ingestion *", medianse.n_sE2|group.n_sE2, sep = " ", remove = T) %>% 
   unite(medianse.s_E2, median.s_E2|se.s_E2, sep = " ± ", remove = T) %>% 
-  unite("Total duration of phloem ingestions [s] *", medianse.s_E2|group.s_E2, sep = " ", remove = T) %>% 
+  unite("Total duration of phloem ingestions [min] *", medianse.s_E2|group.s_E2, sep = " ", remove = T) %>% 
   unite(medianse.mean_E2, median.mean_E2|se.mean_E2, sep = " ± ", remove = T) %>% 
-  unite("Mean duration of a single event of phloem ingestion [s] *", medianse.mean_E2|group.mean_E2, sep = " ", remove = T) %>% 
+  unite("Mean duration of a single event of phloem ingestion [min] *", medianse.mean_E2|group.mean_E2, sep = " ", remove = T) %>% 
   unite(medianse.s_longestE2, median.s_longestE2|se.s_longestE2, sep = " ± ", remove = T) %>% 
-  unite("Duration of the longest phloem ingestion [s] *", medianse.s_longestE2|group.s_longestE2, sep = " ", remove = T) %>% 
+  unite("Duration of the longest phloem ingestion [min] *", medianse.s_longestE2|group.s_longestE2, sep = " ", remove = T) %>% 
   unite(medianse.s_notE, median.s_notE|se.s_notE, sep = " ± ", remove = T) %>% 
-  unite("Total duration of non-phloematic phases [s] **", medianse.s_notE|group.s_notE, sep = " ", remove = T) %>% 
+  unite("Total duration of non-phloematic phases [min] **", medianse.s_notE|group.s_notE, sep = " ", remove = T) %>% 
   unite(medianse.t_1sE2.exp, median.t_1sE2.exp|se.t_1sE2.exp, sep = " ± ", remove = T) %>% 
-  unite("Time from 1st probe to 1st sustained (> 600 s) phloem ingestion [s] *", medianse.t_1sE2.exp|group.t_1sE2.exp, sep = " ", remove = T) %>% 
+  unite("Time from 1st probe to 1st sustained (> 10 min) phloem ingestion [min] *", medianse.t_1sE2.exp|group.t_1sE2.exp, sep = " ", remove = T) %>% 
   unite(medianse.t_1E2.exp, median.t_1E2.exp|se.t_1E2.exp, sep = " ± ", remove = T) %>% 
-  unite("Time from 1st probe to 1st phloem ingestion [s] *", medianse.t_1E2.exp|group.t_1E2.exp, sep = " ", remove = T) %>% 
+  unite("Time from 1st probe to 1st phloem ingestion [min] *", medianse.t_1E2.exp|group.t_1E2.exp, sep = " ", remove = T) %>% 
   unite(medianse.percprobtime_E2, median.percprobtime_E2|se.percprobtime_E2, sep = " ± ", remove = T) %>% 
   unite("Percentage of probing time spent in phloem ingestion [%] *", medianse.percprobtime_E2|group.percprobtime_E2, sep = " ", remove = T) %>% 
   unite(medianse.percprobtime_C, median.percprobtime_C|se.percprobtime_C, sep = " ± ", remove = T) %>% 
@@ -1063,7 +1063,7 @@ median_gentab <- median_gentab %>%
   unite(medianse.s_npto1stprobe, median.s_npto1stprobe|se.s_npto1stprobe, sep = " ± ", remove = T) %>% 
   unite("Time from 1st np to 1st probe [s] *", medianse.s_npto1stprobe|group.s_npto1stprobe, sep = " ", remove = T) %>% 
   unite(medianse.t_1st_sE2, median.t_1st_sE2|se.t_1st_sE2, sep = " ± ", remove = T) %>% 
-  unite("Time of 1st sustained phloem phase [s] *", medianse.t_1st_sE2|group.t_1st_sE2, sep = " ", remove = T) %>% 
+  unite("Time of 1st sustained phloem phase [min] *", medianse.t_1st_sE2|group.t_1st_sE2, sep = " ", remove = T) %>% 
   dplyr::select(!c(emmean:response))
 
 #add numbers of recs per cvs and sex
@@ -1074,25 +1074,10 @@ n_tab <- dub %>%
 median_gentab_n <- full_join(n_tab, median_gentab, by = c("Cultivar", "Sex"))
 
 #Table 3
-#table: non phloem variables
-write.csv(median_gentab_n %>% 
-            dplyr::select(Cultivar, Sex, n, c(4:11|27)), file = "Table3.csv", row.names = F)
-
-#Table 4
-#table: phloem variables
-write.csv(median_gentab_n %>% 
-            dplyr::select(Cultivar, Sex, n, c(12:19|28)), file = "Table4.csv", row.names = F)
-
-#Table 5
-#table: percentage variables
-write.csv(median_gentab_n %>% 
-            dplyr::select(Cultivar, Sex, n, c(20:23)), file = "Table5.csv", row.names = F)
-
-#Table 6
-#table: interruptions variables
-write.csv(median_gentab_n %>% 
-            dplyr::select(Cultivar, Sex, n, c(24:26)), file = "Table6.csv", row.names = F)
-
+#transposed table (reviewer2 suggestion)
+treno <- as_tibble(t(median_gentab_n), rownames = "row_names")                                               
+write.csv(treno, file = "uniqueTab.csv", row.names = F)
+                                                 
 #SUPPLEMENTARY FILE S2----------
 dacomp <- ynew2
 library(emmeans)
