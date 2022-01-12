@@ -6,7 +6,7 @@
   volume =       "",
   number =       "",
   pages =        "",
-  year =         "submitted",
+  year =         "accepted",
   DOI =          "https://doi.org/10.1101/2021.11.25.470030"
 }
 
