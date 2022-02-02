@@ -6,8 +6,8 @@
   volume =       "",
   number =       "",
   pages =        "",
-  year =         "accepted",
-  DOI =          "https://doi.org/10.1101/2021.11.25.470030"
+  year =         "2022",
+  DOI =          "https://doi.org/10.1016/j.jinsphys.2022.104366"
 }
 
 #Rwaves ANALYSIS------
