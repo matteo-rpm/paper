@@ -3,7 +3,7 @@
   author =       "Matteo Ripamonti and Federico Maron and Daniele Cornara and Cristina Marzachì and Alberto Fereres and Domenico Bosco",
   title =        "{Leafhopper feeding behaviour on three grapevine cultivars with different susceptibilities to Flavescence dorée}",
   journal =      "Journal of Insect Physiology",
-  volume =       "",
+  volume =       "137",
   number =       "",
   pages =        "",
   year =         "2022",
