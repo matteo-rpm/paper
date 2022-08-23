@@ -25,7 +25,7 @@ library("performance")
 
 #####DEVELOPMENTAL TIME, cumulative replicates (5)---------
 #import dataset PTS
-#anadevtRev <- tidyr::as_tibble(rio::import("https://raw.githubusercontent.com/matteo-rpm/projects/master/codes/fitness_db/anadevtR.compl.csv?token=GHSAT0AAAAAABQO3BLMVIAL2JQLTWBB2PJKYPSOEBA"))
+anadevtRev <- tidyr::as_tibble(rio::import("https://raw.githubusercontent.com/matteo-rpm/papers/main/Ripamonti_2022_J-Appl-Entomol/anadevtR.compl.csv"))
 
 #extract Sex and Cultivar columns
 anadevtRev <- anadevtRev %>%
@@ -39,9 +39,9 @@ anadevtRev <- anadevtRev %>%
                               TRUE ~ "other"))
 
 #import dataset PFER
-#anaferR20a <- tidyr::as_tibble(rio::import("https://raw.githubusercontent.com/matteo-rpm/projects/d83fff615c3337f80a7724680237ffeb41996057/codes/fitness_db/anaferR20a.csv?token=GHSAT0AAAAAABQO3BLMJBFJIKKMM2T46NZIYPSNTWQ"))
+anaferR20a <- tidyr::as_tibble(rio::import("https://raw.githubusercontent.com/matteo-rpm/papers/main/Ripamonti_2022_J-Appl-Entomol/anaferR20a.csv"))
 
-#anaferR20b <- tidyr::as_tibble(rio::import("https://raw.githubusercontent.com/matteo-rpm/projects/d83fff615c3337f80a7724680237ffeb41996057/codes/fitness_db/anaferR20b.csv?token=GHSAT0AAAAAABQO3BLMJST6OV7X6TP6E7GKYPSNXWQ"))
+anaferR20b <- tidyr::as_tibble(rio::import("https://raw.githubusercontent.com/matteo-rpm/papers/main/Ripamonti_2022_J-Appl-Entomol/anaferR20b.csv"))
 
 anaferR20a$manichettaxcv <- as.character(anaferR20a$manichettaxcv)
 anaferR20a$moved_to_man_n <- as.character(anaferR20a$moved_to_man_n)
@@ -73,7 +73,7 @@ anaferR20cum$dissday[anaferR20cum$dissected_days == 13] <- 14
 anaferR20cum$dissday[anaferR20cum$dissected_days == 24] <- 25
 
 #import dataset PFER21
-#anaferR21 <- tidyr::as_tibble(rio::import("https://raw.githubusercontent.com/matteo-rpm/projects/d83fff615c3337f80a7724680237ffeb41996057/codes/fitness_db/anaferR21.csv?token=GHSAT0AAAAAABQO3BLNGUQKL6YA3CP3T6FOYPSNY7A"))
+anaferR21 <- tidyr::as_tibble(rio::import("https://raw.githubusercontent.com/matteo-rpm/papers/main/Ripamonti_2022_J-Appl-Entomol/anaferR21.csv"))
 
 anaferR21$manichettaxcv <- as.character(anaferR21$manichettaxcv)
 anaferR21$moved_to_man_n <- as.character(anaferR21$moved_to_man_n)
@@ -214,7 +214,7 @@ ferALL_count[is.na(ferALL_count)] <- 0
 ferALL_count
 
 # import dead nymphs dataset
-#anafer_deadDB <- tidyr::as_tibble(rio::import("https://raw.githubusercontent.com/matteo-rpm/projects/d83fff615c3337f80a7724680237ffeb41996057/codes/fitness_db/anaferR21.csv?token=GHSAT0AAAAAABQO3BLNGUQKL6YA3CP3T6FOYPSNY7A"))
+anafer_deadDB <- tidyr::as_tibble(rio::import("https://raw.githubusercontent.com/matteo-rpm/papers/main/Ripamonti_2022_J-Appl-Entomol/anafer_deadDB.csv"))
 
 anadevtRev <- anadevtRev %>% mutate(status = case_when(new.ad == 1 ~ "emerged",
                                                        new.ad == 0 ~ "dead",
@@ -281,7 +281,7 @@ jtools::export_summs(glmm_logit, glmm_probit, glmm_cauchit,
 #####SURVIVAL CURVES, cumulative replicates (5)---------
 
 #dataset import
-#anasurvR <- tidyr::as_tibble(rio::import("https://raw.githubusercontent.com/matteo-rpm/projects/d83fff615c3337f80a7724680237ffeb41996057/codes/fitness_db/anasurvR.csv?token=GHSAT0AAAAAABQO3BLNXFCZWZVLEZYFRYHKYPSN2HQ"))
+anasurvR <- tidyr::as_tibble(rio::import("https://raw.githubusercontent.com/matteo-rpm/papers/main/Ripamonti_2022_J-Appl-Entomol/anasurvR.csv"))
 
 #modify BRA20m outlier -> not dead
 anasurvR$day[anasurvR$ind == 33] <- 110 #max value of other treats
@@ -476,7 +476,7 @@ write.csv(areas, file = "Tab_areas-curves.csv", row.names = T)
 #####PROLIFICACY, cumulative replicates (3)#######
 
 # FERTILITY TEST, eggs + gene exp combined---
-#genexpvit <- tidyr::as_tibble(rio::import("https://raw.githubusercontent.com/matteo-rpm/projects/master/codes/fitness_db/PFER2020-2021_genestudycomp_report_Maestro2.2_write.csv?token=GHSAT0AAAAAABQO3BLM2ABC46KVEJ67GY6YYPSUODQ"))
+genexpvit <- tidyr::as_tibble(rio::import("https://raw.githubusercontent.com/matteo-rpm/papers/main/Ripamonti_2022_J-Appl-Entomol/PFER2020-2021_genestudycomp_report_Maestro2.2_write.csv"))
 
 # tidy dataset
 genexpvit <- genexpvit %>% filter(Target == "vitellogenin") %>%
