@@ -169,7 +169,7 @@ wkp_devplot_sel <- wkp_devplot$plot +
 wkp_plotdevt_patch <- wkp_devplot_sel / wkp_devplot$table + plot_layout(ncol = 1, heights = c(3, 1)) + 
   theme(axis.text.y.left = element_text(color = rev(c("red", "red", "green", "green", "blue", "blue"))))
 
-ggsave(filename = "Figure1.tiff", plot = wkp_plotdevt_patch, dpi = 600, compression = "lzw", width = 10, height = 6.3)
+ggsave(filename = "Figure1.pdf", plot = wkp_plotdevt_patch, dpi = 600, width = 10, height = 6.3)
 
 # Quantification of treatments effects
 #cox proportional hazard ratio with fixed effects only + stratification per replicate -> bad model, non-proportional hazards
@@ -375,7 +375,7 @@ skp_survplot_sel <- skp_survplot$plot +
 skp_survplot_patch <- skp_survplot_sel / skp_survplot$table + plot_layout(ncol = 1, heights = c(3, 1)) +
   theme(axis.text.y.left = element_text(color = rev(c("red", "red", "green", "green", "blue", "blue"))))
 
-ggsave(filename = "Figure2.tiff", plot = skp_survplot_patch, dpi = 600, compression = "lzw", width = 10, height = 6.3)
+ggsave(filename = "Figure2.pdf", plot = skp_survplot_patch, dpi = 600, width = 10, height = 6.3)
 
 # Quantification of treatments effects
 #cox proportional hazard ratio with fixed effects only + stratification per replicate -> bad model, non-proportional hazards
@@ -442,7 +442,7 @@ devtsurv_joint <- ggplot(df, aes(time, surv, color = Cultivar, linetype = Sex)) 
   theme_minimal()+
   theme(panel.grid = element_blank(), panel.border = element_rect(fill = NA))
 
-ggsave(filename = "Fig3_devtsurv_joint.tiff", plot = devtsurv_joint, dpi = 600, compression = "lzw", width = 8, height = 4)
+ggsave(filename = "Figure3.pdf", plot = devtsurv_joint, dpi = 600, width = 8, height = 4)
 
 #calculate area under developmental time and survival curves
 library("pracma")
@@ -659,7 +659,7 @@ eggenexp_cld <- eggenexp +
   geom_text(data = tempo2, aes(y = yloc, label = label), size = 3.5)
 
 #export graph
-ggsave(filename = "Fig3_eggenexp_cld_vLG.tiff", plot = eggenexp_cld, dpi = 600, compression = "lzw", width = 7, height = 6)
+ggsave(filename = "Figure4.pdf", plot = eggenexp_cld, dpi = 600, width = 7, height = 6)
 
 ##### vitellogenin gene expression ####
 # tl;dr -> no differences!
@@ -707,4 +707,3 @@ jtools::export_summs(fit_gaussian, fit_LMM, fit_gamma, fit_zigamma, fit_glmm_neg
                      error_format = "({std.error})",
                      to.file = "xlsx", file.name = "Tab_GLMMs_vitell.xlsx",
                      exp = F, robust = F)
-
