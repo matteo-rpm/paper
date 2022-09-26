@@ -7,7 +7,7 @@
 #  number =       "",
 #  pages =        "",
 #  year =         "2022",
-#  DOI =          ""
+#  DOI =          "10.1111/jen.13075"
 #}
 
 ##########Fitness tests for Scaphoideus titanus on different grapevine cultivars#############
