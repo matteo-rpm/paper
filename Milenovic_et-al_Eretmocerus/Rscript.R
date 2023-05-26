@@ -61,8 +61,8 @@ paras_survplot <- ggsurvplot(survf_fit, data = paras_surv_4ana, risk.table = "ab
                           conf.int = T,
                           legend.title = "Groups", surv.median.line = "hv",
                           #log.rank.weights = "n", #pval = TRUE, pval.method = TRUE, pval.method.coord = c(20, 0.25),
-                          legend.labs = c("Future, honey", "Future, negative control",
-                                          "Present, honey", "Present, negative control"), break.time.by = 5
+                          legend.labs = c("Future, honey", "Future, no food",
+                                          "Present, honey", "Present, no food"), break.time.by = 5
                           )
 
 every_nth <- function(x, nth, empty = TRUE, inverse = FALSE) 
