@@ -1,8 +1,7 @@
 library(tidyverse)
 
 #import dataset
-paras_surv <- tibble::as_tibble(readxl::read_excel("C:/Users/ripamonti/Documents/Work/Parasitoids/Encarsia/E_formosa_longevity_CC.xlsx"))
-#paras_surv <- tibble::as_tibble(readxl::read_excel("E_formosa_longevity_CC.xlsx"))
+paras_surv <- tibble::as_tibble(readxl::read_excel("E_formosa_longevity_CC.xlsx"))
 
 #tidying
 paras_surv <- paras_surv %>% 
